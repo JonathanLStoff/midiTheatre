@@ -1,0 +1,16 @@
+{
+    "python.analysis.extraPaths": [
+        "",
+        "/Users/jonathanstoff/.vscode/extensions/joedevivo.vscode-circuitpython-0.2.0-darwin-arm64/stubs",
+        "/Users/jonathanstoff/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20250201/adafruit-circuitpython-bundle-py-20250201/lib"
+    ],
+    "python.analysis.typeCheckingMode": "strict",
+    "python.languageServer": "Pylance",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingModuleSource": "none",
+        "reportShadowedImports": "none"
+    },
+    "circuitpython.board.version": null,
+    "django-settings-vscode.projectRoot": "miditheatre/",
+    "django-settings-vscode.settingsModule": "settings",
+}

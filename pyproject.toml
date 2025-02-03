@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "midi-theatre"
+version = "0.1.0"
+description = "Midi Theatre is a python based app that lets you create custom cues for shows using midi. There are no free alternatives that accomplish this. My goal is to create an easy to use application that can used by anyone. This application wilou name and create midi actions and save the names. This is to create a sigular controler for a theater. Exmaple slave applications include: Qlab, QLC+, Mixing Station, Logic pro X."
+authors = ["Jonathan Stoff <jonathanlstoff@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+django = "^5.1.5"
+django-stubs = "^5.1.2"
+channels = "^4.2.0"
+django-types = "^0.20.0"
+mido = "^1.3.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+mypy = "^1.14.1"
+ruff = "^0.9.4"
+pre-commit = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

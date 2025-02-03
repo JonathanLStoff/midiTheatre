@@ -1,0 +1,27 @@
+2025-02-03 16:44:33,525 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 16:44:33,525 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 16:44:33,525 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 16:44:33,525 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 16:44:33,525 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 16:44:33,813 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 16:44:33,813 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 16:44:33,813 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 16:44:33,813 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 16:44:33,813 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 16:44:33,990 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 16:44:33,990 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 16:44:33,990 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 16:44:33,990 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 16:44:33,990 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 16:44:34,182 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 16:44:34,182 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 16:44:34,182 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 16:44:34,182 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 16:44:34,182 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:44:34,360 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:44:34,360 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:44:34,360 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:44:34,360 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:44:34,360 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:44:39,383 - midiTheatreLogger - INFO - Form is valid
+2025-02-03 21:44:39,384 - midiTheatreLogger - INFO - Form is saved
