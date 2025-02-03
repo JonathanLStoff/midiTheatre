@@ -1,6 +1,21 @@
 from django.db.models import Model, CharField, IntegerField, PositiveIntegerField, Manager
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+THEME_CHOICES = [
+            ('light', 'Light Mode'),
+            ('dark', 'Dark Mode'),
+        ]
+class settingUser(Model):
+    objects = Manager()
+    theme = CharField(max_length=10, choices=THEME_CHOICES)
+    go_key = IntegerField(
+                        validators=[MinValueValidator(1), MaxValueValidator(256)],
+                        help_text="Keycode for 'Go' action"
+                    )
+    stop_key = IntegerField(
+                        validators=[MinValueValidator(1), MaxValueValidator(256)],
+                        help_text="Keycode for 'Stop' action"
+                    )
 class action(Model):
     
     objects = Manager()

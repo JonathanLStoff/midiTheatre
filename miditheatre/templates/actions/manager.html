@@ -8,6 +8,13 @@
         .sidebar { background: #f8f9fa; border-right: 1px solid #dee2e6; }
         .action-list { cursor: move; }
     </style>
+    <!-- In your existing sidebar -->
+    <div class="list-group">
+    <a href="{% url 'settings' %}" class="list-group-item list-group-item-action">
+            <i class="bi bi-gear me-2"></i>Settings
+        </a>
+    <!-- Other menu items -->
+    </div>
 </head>
 <body>
     <div class="container-fluid">
@@ -56,7 +63,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        {{ form.as_p }}
+                        {{ form_a.as_p }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

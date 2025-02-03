@@ -25,3 +25,95 @@
 2025-02-03 21:44:34,360 - midiTheatreLogger - CRITICAL - This is a critical message
 2025-02-03 21:44:39,383 - midiTheatreLogger - INFO - Form is valid
 2025-02-03 21:44:39,384 - midiTheatreLogger - INFO - Form is saved
+2025-02-03 21:47:13,120 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:47:13,120 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:47:13,120 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:47:13,120 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:47:13,120 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:48:02,258 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:48:02,259 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:48:02,259 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:48:02,259 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:48:02,259 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:48:04,653 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:48:04,653 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:48:04,653 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:48:04,653 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:48:04,653 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:48:10,027 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:48:10,027 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:48:10,027 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:48:10,027 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:48:10,027 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:48:22,499 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:48:22,499 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:48:22,499 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:48:22,499 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:48:22,499 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:49:04,507 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:49:04,507 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:49:04,507 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:49:04,507 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:49:04,507 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:49:06,881 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:49:06,882 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:49:06,882 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:49:06,882 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:49:06,882 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:49:15,163 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:49:15,163 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:49:15,163 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:49:15,163 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:49:15,163 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:49:17,481 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:49:17,481 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:49:17,481 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:49:17,481 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:49:17,481 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:49:19,706 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:49:19,706 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:49:19,706 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:49:19,706 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:49:19,706 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:49:22,040 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:49:22,040 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:49:22,040 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:49:22,040 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:49:22,040 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:49:24,393 - midiTheatreLogger - DEBUG - This is a debug message
+2025-02-03 21:49:24,393 - midiTheatreLogger - INFO - This is an info message
+2025-02-03 21:49:24,393 - midiTheatreLogger - WARNING - This is a warning message
+2025-02-03 21:49:24,393 - midiTheatreLogger - ERROR - This is an error message
+2025-02-03 21:49:24,394 - midiTheatreLogger - CRITICAL - This is a critical message
+2025-02-03 21:54:23,856 - midiTheatreLogger - INFO - Form is valid
+2025-02-03 21:54:23,856 - midiTheatreLogger - INFO - Form is saved
+2025-02-03 21:54:23,857 - midiTheatreLogger - INFO - Order is set
+2025-02-03 21:54:23,860 - midiTheatreLogger - INFO - Action is saved
+2025-02-03 23:04:26,022 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:04:26,022 - midiTheatreLogger - INFO - Creating form with: dark, 60, 61
+2025-02-03 23:05:11,865 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:05:11,865 - midiTheatreLogger - INFO - Creating form with: dark, 60, 61
+2025-02-03 23:10:10,295 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:10:10,296 - midiTheatreLogger - INFO - Creating form with: dark, 60, 61
+2025-02-03 23:11:33,794 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:11:33,795 - midiTheatreLogger - INFO - Creating form with: dark, 60, 61
+2025-02-03 23:11:42,929 - midiTheatreLogger - INFO - Settings saved
+2025-02-03 23:11:42,942 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:11:42,942 - midiTheatreLogger - INFO - Creating form with: dark, 64, 61
+2025-02-03 23:11:47,177 - midiTheatreLogger - INFO - Settings saved
+2025-02-03 23:11:47,185 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:11:47,185 - midiTheatreLogger - INFO - Creating form with: dark, 70, 61
+2025-02-03 23:11:51,173 - midiTheatreLogger - INFO - Settings saved
+2025-02-03 23:11:51,181 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:11:51,181 - midiTheatreLogger - INFO - Creating form with: dark, 70, 49
+2025-02-03 23:14:59,772 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:14:59,773 - midiTheatreLogger - INFO - Creating form with: dark, 70, 49
+2025-02-03 23:15:33,942 - midiTheatreLogger - INFO - Settings saved
+2025-02-03 23:15:33,951 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:15:33,951 - midiTheatreLogger - INFO - Creating form with: dark, 116, 49
+2025-02-03 23:19:15,421 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:19:15,422 - midiTheatreLogger - INFO - Creating form with: dark, 116, 49
+2025-02-03 23:19:33,389 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:19:33,389 - midiTheatreLogger - INFO - Creating form with: dark, 116, 49
+2025-02-03 23:19:44,748 - midiTheatreLogger - INFO - No POST request
+2025-02-03 23:19:44,749 - midiTheatreLogger - INFO - Creating form with: dark, 116, 49

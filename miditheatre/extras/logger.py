@@ -24,9 +24,3 @@ file_handler.setFormatter(file_format)
 LOGGER.addHandler(console_handler)
 LOGGER.addHandler(file_handler)
 
-# Example usage
-LOGGER.debug('This is a debug message')
-LOGGER.info('This is an info message')
-LOGGER.warning('This is a warning message')
-LOGGER.error('This is an error message')
-LOGGER.critical('This is a critical message')

@@ -1,0 +1,104 @@
+<!-- Add this to base.html -->
+
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // If using Django session storage instead:
+        // const djangoTheme = "{{ request.session.theme|default:'light' }}";
+        // document.documentElement.setAttribute('data-theme', djangoTheme);
+    });
+    </script>
+    {% block content %}
+<div class="container mt-4 position-relative">
+    <!-- Close Button -->
+    <a href="/" class="btn btn-lg btn-outline-secondary position-absolute top-0 start-0 m-3" style="z-index: 1000;">
+        &times;
+    </a>
+    
+    <h2 class="pt-4">Settings</h2>
+    
+    <form method="post">
+            {% csrf_token %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Appearance</h5>
+                    <div class="mb-4">
+                        {{ form.theme.label_tag }}
+                        <div class="btn-group" role="group">
+                            {% for choice in form.theme %}
+                            <label class="btn btn-outline-secondary">
+                                {{ choice.tag }} {{ choice.choice_label }}
+                            </label>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <h5 class="card-title mt-4">Key Bindings</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">{{ form.go_key.label }}</label>
+                                <div class="input-group">
+                                    <button type="button" class="btn btn-outline-secondary record-key" data-target="id_go_key">
+                                        Record Key
+                                    </button>
+                                    {{ form.go_key }}
+                                    <span class="input-group-text key-display" data-target="id_go_key"></span>
+                                </div>
+                                <small class="form-text text-muted">{{ form.go_key.help_text }}</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">{{ form.stop_key.label }}</label>
+                                <div class="input-group">
+                                    <button type="button" class="btn btn-outline-secondary record-key" data-target="id_stop_key">
+                                        Record Key
+                                    </button>
+                                    {{ form.stop_key }}
+                                    <span class="input-group-text key-display" data-target="id_stop_key"></span>
+                                </div>
+                                <small class="form-text text-muted">{{ form.stop_key.help_text }}</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary mt-3">Save Settings</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const recordButtons = document.querySelectorAll('.record-key');
+        let activeInput = null;
+    
+        recordButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                activeInput = this.dataset.target;
+                this.textContent = 'Press any key...';
+                this.classList.add('recording');
+            });
+        });
+    
+        document.addEventListener('keydown', function(e) {
+            if (activeInput) {
+                e.preventDefault();
+                const input = document.getElementById(activeInput);
+                const display = document.querySelector(`.key-display[data-target="${activeInput}"]`);
+                const button = document.querySelector(`.record-key[data-target="${activeInput}"]`);
+                
+                input.value = e.keyCode;
+                display.textContent = `${e.key} (${e.keyCode})`;
+                button.textContent = 'Record Key';
+                button.classList.remove('recording');
+                activeInput = null;
+            }
+        });
+    });
+    </script>
+    {% endblock %}

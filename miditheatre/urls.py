@@ -18,10 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from miditheatre import views
+from typing import Any
 
-urlpatterns = [
+urlpatterns:list[Any] = [
     path('admin/', admin.site.urls),
     path('', views.action_manager, name='action_manager'),
     path('create/', views.create_action, name='create_action'),
     path('reorder/', views.reorder_actions, name='reorder_actions'),
+    path('settings/', views.settings_view, name='settings'),
 ]
