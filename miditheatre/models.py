@@ -16,6 +16,10 @@ class settingUser(Model):
                         validators=[MinValueValidator(1), MaxValueValidator(256)],
                         help_text="Keycode for 'Stop' action"
                     )
+class actionPath(Model):
+    objects=Manager()
+    category = CharField(max_length=255, unique=True)
+    parent = CharField(max_length=255, unique=True)
 class action(Model):
     
     objects = Manager()
