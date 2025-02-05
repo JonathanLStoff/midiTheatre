@@ -118,8 +118,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = "static/"
-STATIC_ROOT = str(BASE_DIR) + "miditheatre\templates\static"
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # For collected static files in production
+STATICFILES_DIRS = [
+    BASE_DIR / 'miditheatre' / 'static',  # Your actual static files directory
+]
+LOGGER.info(STATIC_ROOT)
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

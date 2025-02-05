@@ -1,0 +1,5 @@
+
+.container-fluid { height: 100vh; }
+.sidebar { background-color: #1b2a39; border-right: 1px solid #dee2e6; }
+.action-list { cursor: move; }
+body { background-color: #343a40; color: #ffffff; }
