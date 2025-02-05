@@ -2,7 +2,11 @@
 .container-fluid { height: 100vh; }
 .sidebar { background-color: #1b2a39; border-right: 1px solid #171616; }
 .action-list { cursor: move; }
-body { background-color: #343a40; color: #ffffff; }
+body { 
+    background-color: #343a40; 
+    color: #ffffff;
+    line-height: normal;
+}
 .settings { background-color: #1b2a39; border: 1px solid #171616; color: #ffffff;}
 form { background-color: #1b2a39; color: #ffffff; }
 .modal-content { background-color: #1b2a39; color: #ffffff; }
@@ -74,4 +78,42 @@ h3 {
     background-color: #1a202c;
     color: white;
     border: 1px solid #4a5568;
+}
+.details {
+    font-size: 40%;
+    margin: 0%;
+    padding-top: 4%;
+}
+.details-path {
+    font-size: 70%;
+    color: #bcc6ce;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.details-byte {
+    font-size: 70%;
+    color: #409d1f;
+
+}
+.add-action {
+    display: inline-flex;
+    justify-content: right;
+    position: right;
+    align-self: right;
+}
+.action-name {
+    font-size: 100%;
+}
+.col-action-list {
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-group-item {
+    margin: 2%;
+    padding: 2%;
+
 }

@@ -37,13 +37,25 @@
                 <h4>Action Order</h4>
                 <div id="sortable" class="list-group">
                     {% for action in ordered_actions %}
-                    <div class="list-group-item action-list" data-id="{{ action.id }}">
-                        {{ action.name }}
-                        <div class="float-end">
-                            <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
-                            <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
-                        </div>
-                    </div>
+                        {% for action_all in actions %}
+                            {% if action_all.id|stringformat:"s" == action %}
+                                <div class="list-group-item action-list" data-id="{{ action.id }}">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div>{{ action_all.name }}</div>
+                                            <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
+                                        </div>
+                                        <div class="col-auto d-flex align-items-center">
+                                            <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
+                                            <div class="float-end">
+                                                <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
+                                                <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     {% endfor %}
                 </div>
             </div>
@@ -127,7 +139,7 @@
     
                 <h5 class="modal-title">Settings</h5>
             
-                <form method="post">
+                <form method="post" action="{% url 'settings' %}">
                     {% csrf_token %}
                     <div>
                         <h3>Appearance:</h3>

@@ -1,5 +1,19 @@
-from django.db.models import Model, CharField, IntegerField, PositiveIntegerField, TextField, Manager, ForeignKey, CASCADE, DateTimeField, JSONField
-from django.core.validators import MinValueValidator, MaxValueValidator
+from uuid import uuid4
+from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db.models import (
+    CASCADE,
+    SET_NULL,
+    CharField,
+    DateTimeField,
+    ForeignKey,
+    IntegerField,
+    JSONField,
+    Manager,
+    Model,
+    PositiveIntegerField,
+    TextField,
+    UUIDField,
+)
 
 THEME_CHOICES = [
             ('light', 'Light Mode'),
@@ -43,6 +57,7 @@ class actionPath(Model):
 class action(Model):
     
     objects = Manager()
+    id = UUIDField(primary_key=True, default=uuid4, editable=False)
     path = ForeignKey(actionPath, on_delete=CASCADE, blank=True, null=True)
     name = CharField(max_length=255)
     channel = IntegerField(
@@ -60,13 +75,22 @@ class action(Model):
 
     def __str__(self) -> str:
         return str(self.name)
+    
+    def delete(self, using=None, keep_parents=False):
+        for show_mod in show.objects.all():
+            for index, action in enumerate(show_mod.actions):
+                if action == self.id:
+                    show_mod.actions.pop(index) # Remove the action from the show
+                    show_mod.save()
+        return super().delete(using=using, keep_parents=keep_parents)
 class show(Model):
     objects = Manager()
     name = CharField(max_length=255)
     description = TextField(blank=True, null=True)
     created = DateTimeField(auto_now_add=True)
     updated = DateTimeField(auto_now=True)
-    actions = JSONField(blank=True, null=True, default=[])
+    actions = JSONField(blank=True, null=True, default=list)
+    selected_action = IntegerField(blank=True, null=True, default=0)
     
     def __str__(self) -> str:
         return str(self.name)

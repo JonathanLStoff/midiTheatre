@@ -44,7 +44,44 @@ def create_show(request:HttpRequest):
         LOGGER.info("Form is saved")
         return redirect('action_manager')
     return render_main(request)
+@require_http_methods(["POST"])
+def go_view(request:HttpRequest):
+    # Replace with actual go() function call
     
+    return render_main(request)
+
+@require_http_methods(["POST"])
+def stop_view(request:HttpRequest):
+    # Replace with actual stop() function call
+    
+    return render_main(request)
+
+@require_http_methods(["POST"])
+def select_action_view(request:HttpRequest):
+    # Replace with actual stop() function call
+    if settingUser.objects.count() == 0:
+        setting_for_user = settingUser.objects.create(
+            theme='dark',
+            go_key=60,
+            stop_key=61
+        )
+    else:
+        setting_for_user = settingUser.objects.first()
+    if not setting_for_user.show_current:
+        return render(request,
+        settings.TEMPLATES_FOLDER + '/actions/show_add.html',
+        {
+            'form_c': ShowForm(),
+            'template_m': settings.TEMPLATES_FOLDER + '/actions/manager.html',
+        }
+        )
+    else:
+        current_show:show = setting_for_user.show_current
+    set_index = request.POST.get('action_index')
+    current_show.selected_action = set_index
+    current_show.save()
+    return True
+
 def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_form:PathForm = PathForm()):
     if settingUser.objects.count() == 0:
         setting_for_user = settingUser.objects.create(
@@ -64,12 +101,16 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
         show_current = None
         
     folders_path = create_folders(actionPath.objects.all(), action.objects.all())
+    if show_current:
+        LOGGER.info("show_current.actions: %s", show_current.actions)
     return render(
         request, 
         settings.TEMPLATES_FOLDER + '/actions/manager.html',
         {
             'actions': actions,
             'ordered_actions': [] if not show_current else show_current.actions,
+            'go_key': user_set.go_key,
+            'stop_key': user_set.stop_key,
             'form_a': ac_form, 
             'form_b': path_form,
             'form_s': form_s,
@@ -94,7 +135,8 @@ def additemshow(request:HttpRequest):
         return render(request,
         settings.TEMPLATES_FOLDER + '/actions/show_add.html',
         {
-            'form_c': ShowForm()
+            'form_c': ShowForm(),
+            'template_m': settings.TEMPLATES_FOLDER + '/actions/manager.html',
         }
         )
     else:
@@ -104,21 +146,25 @@ def additemshow(request:HttpRequest):
     else:
         current_show.actions = [request.POST.get('id')]
     current_show.save()
-    
+    return redirect('action_manager')
+
+
 def create_folders(path_mod, action)->dict[str, Any]:
     '''Create a dictionary of folders and their children'''
     # Create two helper structures
     node_map = {}
     root = {}
     pk_map = {}
-    
+    for item_a in action:
+        if item_a.path == "" or item_a.path is None:
+            root[item_a.name] = f"MIDI (C:{item_a.channel} K:{item_a.key} V:{item_a.value})|{item_a.id}"
     # First pass: create all nodes
     for item in path_mod:
         node_map[item.category] = {}
         for item_a in action:
             if item_a.path:
                 if item_a.path.pk == item.pk:
-                    node_map[item.category][item_a.name] = f"C:{item_a.channel} K:{item_a.key} V:{item_a.value}"
+                    node_map[item.category][item_a.name] = f"MIDI (C:{item_a.channel} K:{item_a.key} V:{item_a.value})|{item_a.id}"
     
     # Second pass: build hierarchy
     for item in path_mod:
@@ -140,3 +186,11 @@ def reorder_actions(request:HttpRequest):
         action.objects.filter(id=action_id).update(order=index)
     return redirect('action_manager')
 
+@require_http_methods(["POST"])
+def settings_update(request:HttpRequest):
+    setting_for_user = settingUser.objects.first()
+    form = SettingsForm(request.POST, instance=setting_for_user)
+    if form.is_valid():
+        form.save(commit=True)
+        return redirect('action_manager')
+    return render_main(request)

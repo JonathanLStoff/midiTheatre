@@ -28,4 +28,7 @@ urlpatterns:list[Any] = [
     path('create_path/', views.create_path, name='create_path'),
     path('create_show/', views.create_show, name='create_show'),
     path('additemshow/', views.additemshow, name='additemshow'),
+    path('settings/', views.settings_update, name='settings'),
+    path('go/', views.go_view, name='go'),
+    path('stop/', views.stop_view, name='stop'),
 ]

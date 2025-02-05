@@ -1,7 +1,6 @@
 from django import forms
 from miditheatre.extras.logger import LOGGER
 from miditheatre.models import action, settingUser, actionPath, show
-from django.utils.safestring import mark_safe
 
 class ActionForm(forms.ModelForm):
     """ModelForm for the action model."""

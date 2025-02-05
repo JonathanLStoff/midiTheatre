@@ -119,11 +119,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # For collected static files in production
+#STATIC_ROOT = BASE_DIR / 'staticfiles'  # For collected static files in production
 STATICFILES_DIRS = [
     BASE_DIR / 'miditheatre' / 'static',  # Your actual static files directory
 ]
-LOGGER.info(STATIC_ROOT)
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+#LOGGER.info("static root: %s", STATIC_ROOT)
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

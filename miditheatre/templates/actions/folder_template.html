@@ -1,20 +1,25 @@
 {% load custom_filters %}
+{% load static %}
 <div class="list-group">
     {% for key, value in action_dict.items %}
         {% if value|stringformat:"s" == value %}
             <!-- Leaf Item (String Value) -->
             <div class="list-group-item">
-                <div class="action-item-fold">
-                    {% with value|split:"|" as value_parts %}
-                        {{ key }}
+                {% with value|split:"|" as value_parts %}
+                <div class="col-action-list">
+                    <div>
+                        <span class="action-name h5">{{ key }}</span><br>
                         <span class="details">{{ value_parts.0 }}</span>
-                        <form action="{% url 'additemshow' %}" method="post" style="display: inline;">
+                    </div>
+                    <div>
+                        <form action="{% url 'additemshow' %}" method="post" class="mb-0">
                             {% csrf_token %}
                             <input type="hidden" name="id" value="{{ value_parts.1 }}">
-                            <button type="submit" class="btn btn-primary">+</button>
+                            <button type="submit" class="add-action btn btn-primary">+</button>
                         </form>
-                    {% endwith %}
+                    </div>
                 </div>
+                {% endwith %}
             </div>
         {% else %}
             <div class="folder-container" data-theme="dark">
