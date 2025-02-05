@@ -1,30 +1,49 @@
 from django import forms
 from miditheatre.models import action, settingUser, actionPath, show
+from django.utils.safestring import mark_safe
 
 class ActionForm(forms.ModelForm):
     path = forms.ModelChoiceField(
         queryset=actionPath.objects.all(),
         required=False,
-        empty_label="/"
+        empty_label="/",
+        widget=forms.Select(attrs={'class': 'form-text-input'}),
+    )
+    name = forms.CharField(
+        max_length=255,
+        widget=forms.TextInput(attrs={'class': 'form-text-input'}),
     )
     
     class Meta:
         model = action
         fields = ['name', 'channel', 'key', 'value']
         widgets = {
-            'channel': forms.NumberInput(attrs={'min': 0, 'max': 127}),
-            'key': forms.NumberInput(attrs={'min': 0, 'max': 127}),
-            'value': forms.NumberInput(attrs={'min': 0, 'max': 127}),
+            'channel': forms.NumberInput(attrs={'min': 0, 'max': 127, 'class': 'form-text-input'}),
+            'key': forms.NumberInput(attrs={'min': 0, 'max': 127, 'class': 'form-text-input'}),
+            'value': forms.NumberInput(attrs={'min': 0, 'max': 127, 'class': 'form-text-input'}),
         }
+class ShowForm(forms.ModelForm):
+    name = forms.CharField(
+        max_length=255,
+        widget=forms.TextInput(attrs={'class': 'form-text-input'}),
+    )
+    description = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-text-input'}),
+    )
+
+    class Meta:
+        model = show
+        fields = ['name', 'description']
 class PathForm(forms.ModelForm):
     parent = forms.ModelChoiceField(
         queryset=actionPath.objects.all(),
         required=False,
         empty_label="/",
+        widget=forms.Select(attrs={'class': 'form-text-input'}), #FORM IS NOT SAVING THIS FIELD
     )
     category = forms.CharField(
         max_length=255,
-        help_text="Category name"
+        widget=forms.TextInput(attrs={'class': 'form-text-input'}),
     )
     class Meta:
         model = actionPath

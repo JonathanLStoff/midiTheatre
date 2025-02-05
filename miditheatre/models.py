@@ -1,4 +1,4 @@
-from django.db.models import Model, CharField, IntegerField, PositiveIntegerField, Manager, ForeignKey, CASCADE, DateTimeField, JSONField
+from django.db.models import Model, CharField, IntegerField, PositiveIntegerField, TextField, Manager, ForeignKey, CASCADE, DateTimeField, JSONField
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 THEME_CHOICES = [
@@ -60,7 +60,7 @@ class action(Model):
 class show(Model):
     objects = Manager()
     name = CharField(max_length=255)
-    description = CharField(max_length=255)
+    description = TextField(blank=True, null=True)
     created = DateTimeField(auto_now_add=True)
     updated = DateTimeField(auto_now=True)
     actions = JSONField(blank=True, null=True)
