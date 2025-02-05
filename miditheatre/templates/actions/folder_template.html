@@ -1,23 +1,41 @@
+{% load custom_filters %}
 <div class="list-group">
     {% for key, value in action_dict.items %}
-        <div class="folder-container" data-theme="dark">
-            <div class="folder-header list-group-item" onclick="toggleFolder(this)">
-                <span class="caret">▶</span>
-                {{ key }}
+        {% if value|stringformat:"s" == value %}
+            <!-- Leaf Item (String Value) -->
+            <div class="list-group-item">
+                <div class="action-item-fold">
+                    {% with value|split:"|" as value_parts %}
+                        {{ key }}
+                        <span class="details">{{ value_parts.0 }}</span>
+                        <form action="{% url 'additemshow' %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ value_parts.1 }}">
+                            <button type="submit" class="btn btn-primary">+</button>
+                        </form>
+                    {% endwith %}
+                </div>
             </div>
-            <div class="folder-contents" style="display: none; margin-left: 20px;">
-                {% if value.items %}
-                    {# Recursive template for subfolders #}
-                    {% include template_f with action_dict=value template_f=template_f %}
-                {% else %}
-                    {# List files #}
-                    {% for item in value %}
-                        <div class="list-group-item">
-                            {{ item.name }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
+        {% else %}
+            <div class="folder-container" data-theme="dark">
+                <div class="folder-header list-group-item" onclick="toggleFolder(this)">
+                    <span class="caret">▶</span>
+                    {{ key }}
+                </div>
+                <div class="folder-contents" style="display: none; margin-left: 20px;">
+                    {% if value.items %}
+                        {# Recursive template for subfolders #}
+                        {% include template_f with action_dict=value template_f=template_f %}
+                    {% else %}
+                        {# List files #}
+                        {% for item in value %}
+                            <div class="list-group-item">
+                                {{ item.name }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
             </div>
-        </div>
+        {% endif %}
     {% endfor %}
 </div>

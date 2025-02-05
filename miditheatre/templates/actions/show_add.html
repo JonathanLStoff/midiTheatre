@@ -1,0 +1,48 @@
+{% load static %}
+
+{% block content %}
+<div class="container-fluid min-vh-100 bg-light p-0">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <!-- Page Header -->
+            <div class="bg-primary text-white p-4 mb-4 shadow">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="h3 mb-0">New Show</h1>
+                    <a href="{% url 'action_manager' %}" class="btn btn-light">
+                        <i class="bi bi-x-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Form Content -->
+            <main class="bg-white p-4 shadow">
+                <form method="post" action="{% url 'create_show' %}">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        {{ form_c.as_p }}
+                    </div>
+
+                    <!-- Fixed Footer -->
+                    <div class="bg-light p-3 position-fixed bottom-0 start-0 end-0 border-top">
+                        <div class="d-flex justify-content-end gap-2">
+                            <a href="{% url 'action_manager' %}" class="btn btn-secondary">Cancel</a>
+                            <button type="submit" class="btn btn-primary">Save Show</button>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom spacing for form elements */
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    /* Ensure content doesn't hide behind fixed footer */
+    main {
+        padding-bottom: 100px;
+    }
+</style>
+{% endblock %}

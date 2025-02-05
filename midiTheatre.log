@@ -477,3 +477,394 @@
 2025-02-05 01:19:26,334 - midiTheatreLogger - INFO - C:\Users\legoc\Desktop\Code_Projects\midiTheatre\staticfiles
 2025-02-05 01:19:28,096 - midiTheatreLogger - INFO - C:\Users\legoc\Desktop\Code_Projects\midiTheatre\staticfiles
 2025-02-05 15:20:47,525 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 11:57:26,366 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 11:57:26,615 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 11:57:26,793 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 11:57:26,990 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 16:57:27,130 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 16:57:32,269 - midiTheatreLogger - INFO - Item: None
+2025-02-05 16:57:32,270 - midiTheatreLogger - INFO - Item: None
+2025-02-05 16:57:32,270 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {}}}
+2025-02-05 16:58:30,403 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 16:58:44,942 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 16:58:51,387 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:00:00,852 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:01:29,342 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:05,893 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:17,474 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:25,950 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:28,259 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:32,614 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:38,018 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:39,312 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:41,652 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:05:55,810 - midiTheatreLogger - INFO - Form is valid
+2025-02-05 17:05:55,812 - midiTheatreLogger - INFO - Path: None
+2025-02-05 17:05:55,831 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:05:55,831 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:05:55,831 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:05:55,831 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:05:55,832 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {}}}
+2025-02-05 17:06:53,017 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:06:53,296 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:06:53,297 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:06:53,297 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:06:53,297 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:06:53,297 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {}}}
+2025-02-05 17:07:04,433 - midiTheatreLogger - INFO - Form is valid
+2025-02-05 17:07:04,435 - midiTheatreLogger - INFO - Path: None
+2025-02-05 17:07:04,442 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:07:04,442 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:07:04,442 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:07:04,442 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:07:04,442 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:07:04,442 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:07:04,443 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {}}}
+2025-02-05 17:07:23,827 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:08:41,241 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:09:02,002 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:09:04,361 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:09:09,716 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:09:11,981 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:09:14,805 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:14,805 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:14,805 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:14,805 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:14,805 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:14,805 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:14,806 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {}}}
+2025-02-05 17:09:23,316 - midiTheatreLogger - INFO - Form is valid
+2025-02-05 17:09:23,316 - midiTheatreLogger - INFO - Path: /testy/more_testy
+2025-02-05 17:09:23,319 - midiTheatreLogger - INFO - Path: /testy/more_testy
+2025-02-05 17:09:23,327 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:23,327 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:23,327 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:23,327 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:09:23,328 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:23,328 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:23,328 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:09:23,328 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:09:23,328 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1'}}}
+2025-02-05 17:10:24,304 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:26,673 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:32,940 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:36,175 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:39,415 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:43,691 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:45,959 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:49,223 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:10:58,653 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:11:05,057 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:11:14,736 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:14,736 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:14,737 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:14,737 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:11:14,738 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:14,738 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:14,738 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:14,738 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:11:14,739 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1'}}}
+2025-02-05 17:11:25,248 - midiTheatreLogger - INFO - Form is valid
+2025-02-05 17:11:25,249 - midiTheatreLogger - INFO - Path: /testy/more_testy
+2025-02-05 17:11:25,252 - midiTheatreLogger - INFO - Path: /testy/more_testy
+2025-02-05 17:11:25,260 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:25,260 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:25,260 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:25,260 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:11:25,261 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:11:25,261 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:25,262 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:25,262 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:11:25,262 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:11:25,262 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:11:25,263 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 17:28:36,266 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:36,266 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:36,266 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:36,267 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:36,268 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:36,268 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:36,268 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:36,268 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:36,268 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:36,268 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:36,268 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 12:28:49,307 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 12:28:49,831 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 12:28:50,046 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 12:28:50,281 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:28:50,423 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:28:53,347 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:53,347 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:53,347 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:53,348 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:53,349 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:53,349 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:53,349 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:53,349 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:28:53,349 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:53,349 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:28:53,350 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 17:32:59,434 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:32:59,435 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:32:59,435 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:32:59,436 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:32:59,437 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:32:59,438 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:32:59,438 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:32:59,438 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:32:59,438 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:32:59,438 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:32:59,438 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 17:34:54,791 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:34:54,791 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:34:54,791 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:34:54,792 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:34:54,792 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:34:54,793 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:34:54,793 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:34:54,793 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:34:54,793 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:34:54,793 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:34:54,794 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 17:35:12,010 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:35:12,011 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:35:12,011 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:35:12,011 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:35:12,013 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:35:12,013 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:35:12,013 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:35:12,013 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:35:12,013 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:35:12,013 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:35:12,014 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 17:38:37,854 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:38:37,854 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:38:37,854 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:38:37,855 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:38:37,855 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:38:37,856 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:38:37,856 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:38:37,856 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:38:37,856 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:38:37,856 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:38:37,856 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 17:39:42,154 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:39:42,154 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:39:42,154 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:39:42,155 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:39:42,156 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:39:42,156 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:39:42,156 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:39:42,157 - midiTheatreLogger - INFO - Item: None
+2025-02-05 17:39:42,157 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:39:42,157 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 17:39:42,158 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 17:41:36,432 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:41:39,763 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:41:51,137 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:41:53,432 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:41:57,725 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:41:59,966 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:01,177 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:02,407 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:08,698 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:24,060 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:29,341 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:30,682 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:35,021 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:42:54,624 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:43:00,050 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:43:03,399 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:43:05,716 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:54:30,349 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:54:44,903 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:54:47,252 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:54:50,599 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:02,017 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:03,415 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:06,769 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:10,138 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:20,599 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:29,944 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:32,196 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:35,454 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:40,772 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:42,060 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:44,300 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:49,640 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:55:53,946 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:01,338 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:04,692 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:28,323 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:31,684 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:42,052 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:53,451 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:55,793 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:57,005 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:56:59,292 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:00,512 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:03,756 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:09,046 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:11,266 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:12,493 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:32,990 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:34,316 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:36,594 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:38,838 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:44,113 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:48,416 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:57:49,667 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:58:24,416 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:59:40,755 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:59:46,192 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 17:59:47,483 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:00:56,869 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:00:58,223 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:03,516 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:04,810 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:13,194 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:18,480 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:20,796 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:28,182 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:31,528 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:01:34,852 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:08:30,587 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:08:43,104 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:08:54,625 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:09:02,990 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:09:11,398 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:09:12,737 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:09:55,873 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:09:55,873 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:09:55,873 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:09:55,874 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:09:55,874 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:09:55,875 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:09:55,875 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:09:55,875 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:09:55,875 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:09:55,875 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:09:55,875 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:10:15,030 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:10:17,399 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:10:24,703 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:10:26,995 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:10:29,961 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:10:29,961 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:10:29,961 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:10:29,962 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:10:29,963 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:10:29,964 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:10:29,964 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:10:29,964 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:10:29,964 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:10:29,964 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:10:29,964 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:11:00,837 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:11:15,399 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:11:22,846 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:11:51,988 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:11:51,988 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:11:51,989 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:11:51,989 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:11:51,991 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:11:51,991 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:11:51,991 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:11:51,991 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:11:51,991 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:11:51,991 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:11:51,992 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:15:03,601 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:15:04,984 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:15:08,874 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:15:08,874 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:15:08,874 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:15:08,875 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:15:08,876 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:15:08,876 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:15:08,876 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:15:08,876 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:15:08,876 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:15:08,876 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:15:08,877 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:19:26,915 - midiTheatreLogger - INFO - Form is valid
+2025-02-05 18:19:26,919 - midiTheatreLogger - INFO - Form is saved
+2025-02-05 18:19:26,927 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:26,927 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:26,927 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:26,928 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:26,928 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:26,929 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:26,929 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:26,929 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:26,929 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:26,929 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:26,929 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:19:34,252 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:34,252 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:34,252 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:34,253 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:34,254 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:34,254 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:34,254 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:34,254 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:19:34,254 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:34,254 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:19:34,255 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:30:53,767 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:30:58,180 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:31:08,271 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:08,272 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:08,272 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:08,272 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:08,274 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:08,274 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:08,274 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:08,274 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:08,274 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:08,274 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:08,275 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:31:18,197 - midiTheatreLogger - INFO - Setting SHOW: None
+2025-02-05 18:31:29,851 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:29,851 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:29,851 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:29,852 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:29,853 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:29,853 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:29,853 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:29,853 - midiTheatreLogger - INFO - Item: None
+2025-02-05 18:31:29,853 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:29,854 - midiTheatreLogger - INFO - Item: /testy/more_testy
+2025-02-05 18:31:29,854 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:31:43,215 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:31:44,580 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:31:47,923 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:36:23,170 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:36:39,552 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 18:36:45,652 - midiTheatreLogger - INFO - Root: {'testy': {'more_testy': {'py': 'C:1 K:1 V:1', 'data': 'C:1 K:1 V:1'}}}
+2025-02-05 13:37:25,566 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 13:37:35,234 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 13:37:35,549 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 13:37:35,734 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 13:37:35,929 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:37:36,069 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:38:03,591 - midiTheatreLogger - INFO - Root: {}
+2025-02-05 18:38:13,043 - midiTheatreLogger - INFO - Form is valid
+2025-02-05 18:38:13,048 - midiTheatreLogger - INFO - Form is saved
+2025-02-05 18:38:13,054 - midiTheatreLogger - INFO - Root: {}
+2025-02-05 18:38:18,106 - midiTheatreLogger - INFO - Root: {}
+2025-02-05 18:38:50,472 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:38:57,917 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:39:00,274 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:39:02,594 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:39:13,068 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:39:23,603 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:40:22,839 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:40:29,285 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:40:31,649 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:40:37,028 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:40:44,435 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:40:47,805 - midiTheatreLogger - INFO - /Users/jonathanstoff/Desktop/Scripts/midiTheatre/staticfiles
+2025-02-05 18:40:56,927 - midiTheatreLogger - INFO - Root: {}
+2025-02-05 18:41:00,804 - midiTheatreLogger - INFO - Root: {}

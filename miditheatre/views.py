@@ -20,8 +20,8 @@ def create_action(request:HttpRequest):
     form = ActionForm(request.POST)
     if form.is_valid():
         LOGGER.info("Form is valid")
-        form.save(commit=True)
-        LOGGER.info("Form is saved")
+        model_saved = form.save(commit=True)
+        LOGGER.info("Path: %s", model_saved.path)
         return redirect('action_manager')
     return render_main(request)
 
@@ -55,11 +55,7 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
     else:
         setting_for_user = settingUser.objects.first()
     user_set = setting_for_user
-    form_s = SettingsForm(initial={
-        'theme': user_set.theme,
-        'go_key': user_set.go_key,
-        'stop_key': user_set.stop_key
-    })
+    form_s = SettingsForm(instance=user_set)
     actions:action = action.objects.all()
     shows = show.objects.all()
     if setting_for_user:
@@ -83,6 +79,32 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
             'template_f': settings.TEMPLATES_FOLDER + '/actions/folder_template.html',
             }
         )
+@require_http_methods(["POST"])
+def additemshow(request:HttpRequest):
+    if settingUser.objects.count() == 0:
+        setting_for_user = settingUser.objects.create(
+            theme='dark',
+            go_key=60,
+            stop_key=61
+        )
+    else:
+        setting_for_user = settingUser.objects.first()
+    LOGGER.info("Setting SHOW: %s", setting_for_user.show_current)
+    if not setting_for_user.show_current:
+        return render(request,
+        settings.TEMPLATES_FOLDER + '/actions/show_add.html',
+        {
+            'form_c': ShowForm()
+        }
+        )
+    else:
+        current_show:show = setting_for_user.show_current 
+    if isinstance(setting_for_user.show_current.actions, list):
+        current_show.actions.append(request.POST.get('id'))
+    else:
+        current_show.actions = [request.POST.get('id')]
+    current_show.save()
+    
 def create_folders(path_mod, action)->dict[str, Any]:
     '''Create a dictionary of folders and their children'''
     # Create two helper structures
@@ -94,7 +116,6 @@ def create_folders(path_mod, action)->dict[str, Any]:
     for item in path_mod:
         node_map[item.category] = {}
         for item_a in action:
-            LOGGER.info("Item: %s", item_a.path)
             if item_a.path:
                 if item_a.path.pk == item.pk:
                     node_map[item.category][item_a.name] = f"C:{item_a.channel} K:{item_a.key} V:{item_a.value}"
@@ -118,3 +139,4 @@ def reorder_actions(request:HttpRequest):
     for index, action_id in enumerate(order):
         action.objects.filter(id=action_id).update(order=index)
     return redirect('action_manager')
+

@@ -27,27 +27,8 @@
                 <br>
                 <!-- Moved sidebar menu items here -->
                 <div class="list-group">
-                    {% for key, value in action_dict.items %}
-                        <div class="folder-container" data-theme="dark">
-                            <div class="folder-header list-group-item" onclick="toggleFolder(this)">
-                                <span class="caret">▶</span>
-                                {{ key }}
-                            </div>
-                            <div class="folder-contents" style="display: none; margin-left: 20px;">
-                                {% if value.items %}
-                                    {# Recursive template for subfolders #}
-                                    {% include template_f with action_dict=value template_f=template_f %}
-                                {% else %}
-                                    {# List files #}
-                                    {% for item in value %}
-                                        <div class="list-group-item">
-                                            {{ item.name }}
-                                        </div>
-                                    {% endfor %}
-                                {% endif %}
-                            </div>
-                        </div>
-                    {% endfor %}
+                    {% include template_f with action_dict=action_dict template_f=template_f %}
+                    
                 </div>
             </div>
 

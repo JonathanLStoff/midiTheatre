@@ -27,4 +27,5 @@ urlpatterns:list[Any] = [
     path('reorder/', views.reorder_actions, name='reorder_actions'),
     path('create_path/', views.create_path, name='create_path'),
     path('create_show/', views.create_show, name='create_show'),
+    path('additemshow/', views.additemshow, name='additemshow'),
 ]

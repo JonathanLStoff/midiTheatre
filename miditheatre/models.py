@@ -37,6 +37,9 @@ class actionPath(Model):
             if tries > 100:
                 break
         return str(running_path)
+    class Meta:
+        unique_together = ('category', 'parent')
+        
 class action(Model):
     
     objects = Manager()
@@ -63,7 +66,7 @@ class show(Model):
     description = TextField(blank=True, null=True)
     created = DateTimeField(auto_now_add=True)
     updated = DateTimeField(auto_now=True)
-    actions = JSONField(blank=True, null=True)
+    actions = JSONField(blank=True, null=True, default=[])
     
     def __str__(self) -> str:
         return str(self.name)
