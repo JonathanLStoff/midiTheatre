@@ -1,0 +1,32 @@
+# Use an official Python runtime as the base image
+FROM python:3.11-slim
+
+# Prevents Python from writing .pyc files to disk
+ENV PYTHONDONTWRITEBYTECODE 1
+# Prevents Python from buffering stdout and stderr
+ENV PYTHONUNBUFFERED 1
+
+COPY . .
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip && \
+    pip install poetry && \
+    poetry install --no-dev && \
+    poetry export -f requirements.txt > requirements.txt && \
+    pip uninstall -y poetry \ 
+    pip install -r requirements.txt
+
+RUN apt install build-essential pkg-config libasound2-dev git
+
+RUN git clone https://github.com/gbevin/SendMIDI.git
+
+RUN cd SendMIDI && cd Builds/LinuxMakeFile && make && mv build/sendmidi /usr/local/bin
+# Expose port 8000 for the Django app (adjust as needed)
+EXPOSE 8000
+
+# Run the Django development server
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
