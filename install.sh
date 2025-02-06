@@ -1,1 +1,0 @@
-brew install gbevin/tools/sendmidi

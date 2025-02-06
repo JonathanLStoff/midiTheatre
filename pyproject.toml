@@ -12,7 +12,10 @@ django-stubs = "^5.1.2"
 channels = "^4.2.0"
 django-types = "^0.20.0"
 keyboard = "^0.13.5"
-rtmidi2 = "^1.4.0"
+python-rtmidi = "^1.5.8"
+build = "^1.2.2.post1"
+installer = "^0.7.0"
+meson = "^1.7.0"
 
 
 [tool.poetry.group.dev.dependencies]
