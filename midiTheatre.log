@@ -1318,3 +1318,179 @@
 2025-02-07 01:56:46,071 - midiTheatreLogger - INFO - Root: {'all': 'MIDI (C:3 K:5 V:7)|20f8073f-4a40-4929-82d2-2748c3758c6f', 'mixing station': {'Channel 1': {'Fader': 'MIDI (C:1 K:1 V:1)|789e6c29-21d1-41c9-946b-85264a6eda95'}}, 'Lights in office': {'one': 'MIDI (C:1 K:2 V:44)|7f13ffba-e294-40e2-be2d-324ccf5433a2'}}
 2025-02-07 01:56:46,072 - midiTheatreLogger - INFO - show_current.selected_action: None
 2025-02-07 01:56:46,072 - midiTheatreLogger - INFO - show_current.actions: ['789e6c29-21d1-41c9-946b-85264a6eda95', '789e6c29-21d1-41c9-946b-85264a6eda95', '789e6c29-21d1-41c9-946b-85264a6eda95', '20f8073f-4a40-4929-82d2-2748c3758c6f', '7f13ffba-e294-40e2-be2d-324ccf5433a2']
+2025-02-07 14:34:11,093 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 14:34:11,093 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 14:34:11,093 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 14:34:13,670 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 14:34:13,680 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 14:34:13,680 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 14:34:13,680 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 14:39:30,723 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 14:39:30,723 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 14:39:30,723 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 14:47:22,368 - midiTheatreLogger - INFO - Path: BeetleJuice
+2025-02-07 14:47:22,380 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 14:47:22,380 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 14:47:22,380 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 14:49:41,898 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 14:49:41,898 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 14:49:41,898 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 14:49:43,753 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 14:49:43,753 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 14:49:43,753 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 14:59:45,076 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 14:59:45,076 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 14:59:45,076 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 14:59:45,076 - midiTheatreLogger - INFO - actions_list: {0: 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 1: '250716a1-d93e-4c01-ad85-bd1150f6ad0f'}
+2025-02-07 15:01:41,471 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:01:41,472 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:01:41,472 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:01:41,472 - midiTheatreLogger - INFO - actions_list: {0: 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 1: '250716a1-d93e-4c01-ad85-bd1150f6ad0f'}
+2025-02-07 15:46:01,729 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:46:01,730 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:46:01,730 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:46:01,730 - midiTheatreLogger - INFO - actions_list: {0: 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 1: '250716a1-d93e-4c01-ad85-bd1150f6ad0f'}
+2025-02-07 15:49:23,497 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:49:23,498 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:49:23,498 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:49:23,498 - midiTheatreLogger - INFO - actions_list: {0: 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 1: '250716a1-d93e-4c01-ad85-bd1150f6ad0f'}
+2025-02-07 15:49:47,687 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:49:47,688 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:49:47,688 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:49:47,688 - midiTheatreLogger - INFO - actions_list: {0: 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 1: '250716a1-d93e-4c01-ad85-bd1150f6ad0f'}
+2025-02-07 15:51:27,464 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:51:27,464 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:51:27,465 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:51:27,465 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>}
+2025-02-07 15:51:37,954 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 15:51:37,966 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:51:37,966 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:51:37,966 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:51:37,967 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>}
+2025-02-07 15:51:39,786 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 15:51:39,795 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:51:39,796 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:51:39,796 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:51:39,797 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>}
+2025-02-07 15:51:48,875 - midiTheatreLogger - INFO - Setting SHOW: BeetleJuice
+2025-02-07 15:51:48,887 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:51:48,887 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:51:48,887 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 15:51:48,888 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>}
+2025-02-07 15:51:55,485 - midiTheatreLogger - INFO - Setting SHOW: BeetleJuice
+2025-02-07 15:51:55,496 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:51:55,496 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:51:55,496 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:51:55,497 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>}
+2025-02-07 15:51:58,185 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:51:58,185 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:51:58,185 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:51:58,187 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>}
+2025-02-07 15:52:03,353 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 15:52:03,363 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:52:03,363 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:52:03,363 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:52:03,365 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>}
+2025-02-07 15:52:06,120 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 15:52:06,130 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:52:06,130 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:52:06,130 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:52:06,132 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>}
+2025-02-07 15:52:06,954 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 15:52:06,962 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:52:06,963 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:52:06,963 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:52:06,964 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>}
+2025-02-07 15:52:08,620 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 15:52:08,629 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:52:08,629 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:52:08,629 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f']
+2025-02-07 15:52:08,631 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>}
+2025-02-07 15:54:27,264 - midiTheatreLogger - INFO - Setting SHOW: BeetleJuice
+2025-02-07 15:54:27,279 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:54:27,279 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:54:27,279 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 15:54:27,280 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 15:54:55,843 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 15:54:55,844 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 15:54:55,844 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 15:54:55,846 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:16:18,594 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:16:18,594 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:16:18,594 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:16:18,596 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:16:20,528 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:16:20,538 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:16:20,539 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:16:20,539 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:16:20,542 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:16:22,011 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:16:22,019 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:16:22,019 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:16:22,019 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:16:22,022 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:17:58,119 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:17:58,120 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:17:58,120 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:17:58,122 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:25:07,219 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:25:07,219 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:25:07,219 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:25:07,221 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:25:23,193 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:25:23,194 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:25:23,194 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:25:23,196 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:25:25,546 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:25:25,555 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:25:25,555 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:25:25,555 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:25:25,557 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:27:11,995 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:27:11,995 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:27:11,996 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:27:11,997 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:27:14,828 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:27:14,839 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:27:14,839 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:27:14,839 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:27:14,841 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:27:23,992 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:27:24,003 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:27:24,003 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:27:24,003 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:27:24,005 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:27:26,609 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:27:26,618 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:27:26,618 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:27:26,618 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:27:26,621 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:35:17,722 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:35:17,723 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:35:17,723 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:35:17,725 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:35:20,490 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:35:20,500 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:35:20,500 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:35:20,500 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:35:20,503 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:35:23,972 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:35:23,982 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:35:23,982 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:35:23,982 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:35:23,984 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:35:26,006 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:35:26,016 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:35:26,017 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:35:26,017 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:35:26,019 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:35:28,905 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:35:28,911 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:35:28,911 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:35:28,911 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:35:28,913 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}
+2025-02-07 16:35:30,655 - midiTheatreLogger - INFO - Select change: None
+2025-02-07 16:35:30,665 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-02-07 16:35:30,666 - midiTheatreLogger - INFO - show_current.selected_action: None
+2025-02-07 16:35:30,666 - midiTheatreLogger - INFO - show_current.actions: ['a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'a0d0e5d1-701c-41d8-86f8-21544290ba9b']
+2025-02-07 16:35:30,668 - midiTheatreLogger - INFO - actions_list: {0: <action: fader 1>, 1: <action: main fader>, 2: <action: fader 1>, 3: <action: main fader>, 4: <action: fader 1>}

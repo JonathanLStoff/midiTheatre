@@ -35,11 +35,15 @@
             <div class="col-md-9 p-3">
                 <h4>Action Order</h4>
                 <div id="sortable" class="list-group">
-                    {% for action in ordered_actions %}
-                        {% for action_all in actions %}
-                            {% if action_all.id|stringformat:"s" == action %}
-                                {% if forloop.counter0 != selected_action %}
-                                    <div class="list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ forloop.counter0 }}">
+                    
+                        {% for key, action_all in actions_list_dict.items %}
+                            
+                                
+                                {% if key == selected_action %}
+                                    <script>
+                                        console.log('Rendering action: {{ key }} equals {{ selected_action }}');
+                                    </script>
+                                    <div class="selected list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}">
                                         <div class="row">
                                             <div class="col">
                                                 <div>{{ action_all.name }}</div>
@@ -54,8 +58,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                {% elif forloop.counter0 == selected_action %}
-                                    <div class="selected list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ forloop.counter0 }}">
+                                {% else %}
+                                    <div class="list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}">
                                         <div class="row">
                                             <div class="col">
                                                 <div>{{ action_all.name }}</div>
@@ -71,9 +75,7 @@
                                         </div>
                                     </div>
                                 {% endif %}
-                        {% endif %}
                     {% endfor %}
-                {% endfor %}
                 </div>
             </div>
             <script>
@@ -103,6 +105,9 @@
                         .then(response => response.json())
                         .then(data => {
                             console.log('Success:', data);
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
                         });
                     });
                 });

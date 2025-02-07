@@ -37,13 +37,13 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
         show_current = None
         
     folders_path = create_folders(actionPath.objects.all(), action.objects.all())
-    actions_list:dict[int, str] = {}
+    actions_list:dict[int, action] = {}
     if show_current:
         LOGGER.info("show_current.selected_action: %s", show_current.selected_action)
         LOGGER.info("show_current.actions: %s", show_current.actions)
-        for act_id in range(len(show_current.actions)):
-            actions_list[act_id] = show_current.actions[act_id]
-        
+        for act_id, actiony in enumerate(show_current.actions):
+            actions_list[act_id] = action.objects.get(id=actiony)
+        LOGGER.info("actions_list: %s", actions_list)
     return render(
             request,
             settings.TEMPLATES_FOLDER + '/actions/manager.html',
