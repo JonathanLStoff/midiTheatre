@@ -5,12 +5,74 @@ from django.conf import settings
 from django.http import HttpRequest
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_protect
 
 from miditheatre.extras.keyboard_utils import keycode_to_name
+from miditheatre.extras.midi import MidiThread
 from miditheatre.extras.logger import LOGGER
 from miditheatre.forms import ActionForm, SettingsForm, PathForm, ShowForm
 from miditheatre.models import action, settingUser, show, actionPath
 
+MIDI = MidiThread()
+
+def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_form:PathForm = PathForm()):
+    if settingUser.objects.count() == 0:
+        setting_for_user = settingUser.objects.create(
+            theme='dark',
+            go_key=60,
+            stop_key=61
+        )
+    elif settingUser.objects.count() > 1:
+        for setting in settingUser.objects.all()[1:]:
+            setting.delete()
+    else:
+        setting_for_user = settingUser.objects.first()
+    user_set = setting_for_user
+    form_s = SettingsForm(instance=user_set)
+    actions:action = action.objects.all()
+    shows = show.objects.all()
+    if setting_for_user:
+        show_current = setting_for_user.show_current
+    else:
+        show_current = None
+        
+    folders_path = create_folders(actionPath.objects.all(), action.objects.all())
+    if show_current:
+        LOGGER.info("show_current.actions: %s", show_current.actions)
+    return render(
+        request, 
+        settings.TEMPLATES_FOLDER + '/actions/manager.html',
+        {
+            'actions': actions,
+            'ordered_actions': [] if not show_current else show_current.actions,
+            'go_key': user_set.go_key,
+            'stop_key': user_set.stop_key,
+            'form_a': ac_form, 
+            'form_b': path_form,
+            'form_s': form_s,
+            'form_c': ShowForm(),
+            'shows': shows,
+            'action_dict': folders_path,
+            'template_f': settings.TEMPLATES_FOLDER + '/actions/folder_template.html',
+            }
+        )
+    
+@require_http_methods(["POST"])
+@csrf_protect
+def select_change(request:HttpRequest):
+    index = request.POST.get('action_index')
+    LOGGER.info("Select change")
+    if settingUser.objects.count() == 0:
+        setting_for_user = settingUser.objects.create(
+            theme='dark',
+            go_key=60,
+            stop_key=61
+        )
+    else:
+        setting_for_user = settingUser.objects.first()
+    setting_for_user.show_current.selected_action = index
+    setting_for_user.show_current.save()
+    return render_main(request)
 
 def action_manager(request:HttpRequest):
     return render_main(request)
@@ -45,15 +107,40 @@ def create_show(request:HttpRequest):
         return redirect('action_manager')
     return render_main(request)
 @require_http_methods(["POST"])
-def go_view(request:HttpRequest):
+async def go_view(request:HttpRequest):
     # Replace with actual go() function call
+    if settingUser.objects.count() == 0:
+        setting_for_user = settingUser.objects.create(
+            theme='dark',
+            go_key=60,
+            stop_key=61
+        )
+    else:
+        setting_for_user = settingUser.objects.first()
+    if not setting_for_user.show_current:
+        return render(request,
+        settings.TEMPLATES_FOLDER + '/actions/show_add.html',
+        {
+            'form_c': ShowForm(),
+            'template_m': settings.TEMPLATES_FOLDER + '/actions/manager.html',
+        }
+        )
     
+    action_id = setting_for_user.show_current.actions[setting_for_user.show_current.selected_action]
+    action_obj:action = action.objects.get(id=action_id)
+    LOGGER.info("Action: %s", action_obj)
+    MIDI.go = True
+    await MIDI.send_midi_message(action_obj.channel, action_obj.key, action_obj.value)
+    if setting_for_user.show_current.selected_action == len(setting_for_user.show_current.actions) - 1:
+        setting_for_user.show_current.selected_action = 0
+    else:
+        setting_for_user.show_current.selected_action += 1
     return render_main(request)
 
 @require_http_methods(["POST"])
 def stop_view(request:HttpRequest):
     # Replace with actual stop() function call
-    
+    MIDI.go = False
     return render_main(request)
 
 @require_http_methods(["POST"])
@@ -65,6 +152,7 @@ def select_action_view(request:HttpRequest):
             go_key=60,
             stop_key=61
         )
+    
     else:
         setting_for_user = settingUser.objects.first()
     if not setting_for_user.show_current:
@@ -82,44 +170,7 @@ def select_action_view(request:HttpRequest):
     current_show.save()
     return True
 
-def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_form:PathForm = PathForm()):
-    if settingUser.objects.count() == 0:
-        setting_for_user = settingUser.objects.create(
-            theme='dark',
-            go_key=60,
-            stop_key=61
-        )
-    else:
-        setting_for_user = settingUser.objects.first()
-    user_set = setting_for_user
-    form_s = SettingsForm(instance=user_set)
-    actions:action = action.objects.all()
-    shows = show.objects.all()
-    if setting_for_user:
-        show_current = setting_for_user.show_current
-    else:
-        show_current = None
-        
-    folders_path = create_folders(actionPath.objects.all(), action.objects.all())
-    if show_current:
-        LOGGER.info("show_current.actions: %s", show_current.actions)
-    return render(
-        request, 
-        settings.TEMPLATES_FOLDER + '/actions/manager.html',
-        {
-            'actions': actions,
-            'ordered_actions': [] if not show_current else show_current.actions,
-            'go_key': user_set.go_key,
-            'stop_key': user_set.stop_key,
-            'form_a': ac_form, 
-            'form_b': path_form,
-            'form_s': form_s,
-            'form_c': ShowForm(),
-            'shows': shows,
-            'action_dict': folders_path,
-            'template_f': settings.TEMPLATES_FOLDER + '/actions/folder_template.html',
-            }
-        )
+
 @require_http_methods(["POST"])
 def additemshow(request:HttpRequest):
     if settingUser.objects.count() == 0:

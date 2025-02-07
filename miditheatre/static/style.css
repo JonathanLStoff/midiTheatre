@@ -24,7 +24,8 @@ form { background-color: #1b2a39; color: #ffffff; }
 .list-group-item {
     background-color: #1a202c;
     color: white;
-    border: 1px solid #4a5568;
+    border: none;
+    /* border: 1px solid #4a5568; */
     margin: 2px 0;
 }
 
@@ -116,4 +117,23 @@ h3 {
     margin: 2%;
     padding: 2%;
 
+}
+.click-action {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.15s ease-in-out; /* Smooth background color transition for hover effect */
+}
+
+.click-action:hover {
+    background-color: #f8f9fa; /* Optional: Add a slight background color change on hover for visual feedback */
+}
+
+.click-action:active {
+    background-color: #e9ecef; /* Slightly darker grey when actively clicked/pressed, adjust as needed */
+    /* You could also add a border or other visual cue here if you prefer, e.g., border: 1px solid #ced4da; */
+}
+#sortable .list-group-item {
+    cursor: pointer;
+}
+#sortable .list-group-item:hover {
+    background-color: #e9ecef;
 }

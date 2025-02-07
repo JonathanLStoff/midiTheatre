@@ -31,4 +31,5 @@ urlpatterns:list[Any] = [
     path('settings/', views.settings_update, name='settings'),
     path('go/', views.go_view, name='go'),
     path('stop/', views.stop_view, name='stop'),
+    path('select_change/', views.select_change, name='select_change'),
 ]

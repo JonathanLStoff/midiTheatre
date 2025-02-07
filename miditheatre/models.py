@@ -61,7 +61,7 @@ class action(Model):
     path = ForeignKey(actionPath, on_delete=CASCADE, blank=True, null=True)
     name = CharField(max_length=255)
     channel = IntegerField(
-        validators=[MinValueValidator(0), MaxValueValidator(127)]
+        validators=[MinValueValidator(0), MaxValueValidator(15)]
     )
     key = IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(127)]
