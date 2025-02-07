@@ -135,5 +135,8 @@ h3 {
     cursor: pointer;
 }
 #sortable .list-group-item:hover {
-    background-color: #e9ecef;
+    background-color: #717375;
+}
+.selected {
+    background-color: #1467b9;
 }

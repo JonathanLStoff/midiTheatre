@@ -37,23 +37,30 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
         show_current = None
         
     folders_path = create_folders(actionPath.objects.all(), action.objects.all())
+    actions_list:dict[int, str] = {}
     if show_current:
+        LOGGER.info("show_current.selected_action: %s", show_current.selected_action)
         LOGGER.info("show_current.actions: %s", show_current.actions)
+        for act_id in range(len(show_current.actions)):
+            actions_list[act_id] = show_current.actions[act_id]
+        
     return render(
-        request, 
-        settings.TEMPLATES_FOLDER + '/actions/manager.html',
-        {
-            'actions': actions,
-            'ordered_actions': [] if not show_current else show_current.actions,
-            'go_key': user_set.go_key,
-            'stop_key': user_set.stop_key,
-            'form_a': ac_form, 
-            'form_b': path_form,
-            'form_s': form_s,
-            'form_c': ShowForm(),
-            'shows': shows,
-            'action_dict': folders_path,
-            'template_f': settings.TEMPLATES_FOLDER + '/actions/folder_template.html',
+            request,
+            settings.TEMPLATES_FOLDER + '/actions/manager.html',
+            {
+                'actions': actions,
+                'ordered_actions': [] if not show_current else show_current.actions,
+                'go_key': user_set.go_key,
+                'stop_key': user_set.stop_key,
+                'form_a': ac_form, 
+                'form_b': path_form,
+                'form_s': form_s,
+                'form_c': ShowForm(),
+                'shows': shows,
+                'selected_action': show_current.selected_action,
+                'actions_list_dict': actions_list,
+                'action_dict': folders_path,
+                'template_f': settings.TEMPLATES_FOLDER + '/actions/folder_template.html',
             }
         )
     
@@ -61,7 +68,7 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
 @csrf_protect
 def select_change(request:HttpRequest):
     index = request.POST.get('action_index')
-    LOGGER.info("Select change")
+    LOGGER.info("Select change: %s", index)
     if settingUser.objects.count() == 0:
         setting_for_user = settingUser.objects.create(
             theme='dark',

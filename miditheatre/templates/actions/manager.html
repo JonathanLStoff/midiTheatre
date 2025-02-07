@@ -34,45 +34,57 @@
 
             <div class="col-md-9 p-3">
                 <h4>Action Order</h4>
-                <style>
-                    #sortable .list-group-item {
-                        cursor: pointer; /* Change cursor to pointer (click cursor) */
-                    }
-                </style>
                 <div id="sortable" class="list-group">
                     {% for action in ordered_actions %}
                         {% for action_all in actions %}
                             {% if action_all.id|stringformat:"s" == action %}
-                                <div class="list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ forloop.counter0 }}">
-                                <div class="row">
-                                    <div class="col">
-                                        <div>{{ action_all.name }}</div>
-                                        <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
-                                    </div>
-                                    <div class="col-auto d-flex align-items-center">
-                                        <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
-                                        <div class="float-end">
-                                            <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
-                                            <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
+                                {% if forloop.counter0 != selected_action %}
+                                    <div class="list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ forloop.counter0 }}">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div>{{ action_all.name }}</div>
+                                                <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
+                                            </div>
+                                            <div class="col-auto d-flex align-items-center">
+                                                <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
+                                                <div class="float-end">
+                                                    <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
+                                                    <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                {% elif forloop.counter0 == selected_action %}
+                                    <div class="selected list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ forloop.counter0 }}">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div>{{ action_all.name }}</div>
+                                                <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
+                                            </div>
+                                            <div class="col-auto d-flex align-items-center">
+                                                <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
+                                                <div class="float-end">
+                                                    <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
+                                                    <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
                         {% endif %}
                     {% endfor %}
                 {% endfor %}
                 </div>
             </div>
-
             <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Add click handler to all action items
                 document.querySelectorAll('.click-action').forEach(item => {
                     item.addEventListener('click', function(e) {
-                        console.log("Click event triggered!"); // ADDED CONSOLE LOG
+                        
                         const actionId = this.dataset.id;
                         const actionIndex = this.dataset.index; // Grab the index from data-index
-
+                        console.log("Click event triggered!", this.dataset.index);
                         // Get CSRF token
                         const csrftoken = getCookie('csrftoken');
 
