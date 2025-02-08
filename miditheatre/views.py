@@ -65,10 +65,8 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
         )
     
 @require_http_methods(["POST"])
-@csrf_protect
 def select_change(request:HttpRequest):
     index = request.POST.get('action_index')
-    LOGGER.info("Select change: %s", index)
     if settingUser.objects.count() == 0:
         setting_for_user = settingUser.objects.create(
             theme='dark',
@@ -79,6 +77,7 @@ def select_change(request:HttpRequest):
         setting_for_user = settingUser.objects.first()
     setting_for_user.show_current.selected_action = index
     setting_for_user.show_current.save()
+    LOGGER.info("Selected action: %s", setting_for_user.show_current.selected_action)
     return render_main(request)
 
 def action_manager(request:HttpRequest):

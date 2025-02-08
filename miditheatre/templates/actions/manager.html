@@ -36,45 +36,43 @@
                 <h4>Action Order</h4>
                 <div id="sortable" class="list-group">
                     
-                        {% for key, action_all in actions_list_dict.items %}
-                            
-                                
-                                {% if key == selected_action %}
-                                    <script>
-                                        console.log('Rendering action: {{ key }} equals {{ selected_action }}');
-                                    </script>
-                                    <div class="selected list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div>{{ action_all.name }}</div>
-                                                <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
-                                            </div>
-                                            <div class="col-auto d-flex align-items-center">
-                                                <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
-                                                <div class="float-end">
-                                                    <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
-                                                    <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
-                                                </div>
-                                            </div>
+                    {% for key, action_all in actions_list_dict.items %}
+                        {% if key == selected_action %}
+                            <script>
+                                console.log('Rendering action: {{ key }} equals {{ selected_action }}');
+                            </script>
+                            <div class="selected list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}">
+                                <div class="row">
+                                    <div class="col">
+                                        <div>{{ action_all.name }}</div>
+                                        <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
+                                        <div class="float-end">
+                                            <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
+                                            <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
                                         </div>
                                     </div>
-                                {% else %}
-                                    <div class="list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div>{{ action_all.name }}</div>
-                                                <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
-                                            </div>
-                                            <div class="col-auto d-flex align-items-center">
-                                                <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
-                                                <div class="float-end">
-                                                    <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
-                                                    <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
-                                                </div>
-                                            </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}">
+                                <div class="row">
+                                    <div class="col">
+                                        <div>{{ action_all.name }}</div>
+                                        <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
+                                        <div class="float-end">
+                                            <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
+                                            <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
                                         </div>
                                     </div>
-                                {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -91,23 +89,11 @@
                         const csrftoken = getCookie('csrftoken');
 
                         // Send POST request to the new endpoint 'select_change'
-                        fetch('/select_change/', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'X-CSRFToken': csrftoken
-                            },
-                            body: JSON.stringify({
-                                'action_id': actionId,
-                                'action_index': actionIndex // Include the index in the post data
-                            })
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Success:', data);
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
+                        console.log("Sending POST request to select_change endpoint...", actionIndex );
+                        $.post("{% url 'select_change' %}", {
+                            action_index: actionIndex, // Directly send action_index as a key
+                            action_id: actionId,     // Directly send action_id as a key
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
                         });
                     });
                 });
