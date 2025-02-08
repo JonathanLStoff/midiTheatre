@@ -2,10 +2,11 @@ import json
 from typing import Any
 
 from django.conf import settings
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_protect
+from asgiref.sync import sync_to_async
 
 from miditheatre.extras.keyboard_utils import keycode_to_name
 from miditheatre.extras.midi import MidiThread
@@ -63,22 +64,64 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
                 'template_f': settings.TEMPLATES_FOLDER + '/actions/folder_template.html',
             }
         )
-    
 @require_http_methods(["POST"])
-def select_change(request:HttpRequest):
+async def select_change(request: HttpRequest) -> HttpResponse:
+    """
+    Handle POST request to select a change action.
+    """
+    LOGGER.info("Request: %s", request.POST)
     index = request.POST.get('action_index')
-    if settingUser.objects.count() == 0:
-        setting_for_user = settingUser.objects.create(
-            theme='dark',
-            go_key=60,
-            stop_key=61
+
+    # Use sync_to_async to call the synchronous database operations
+    @sync_to_async
+    def get_setting_user():
+        if settingUser.objects.count() == 0:
+            setting_for_user = settingUser.objects.create(
+                theme='dark',
+                go_key=60,
+                stop_key=61
+            )
+        else:
+            setting_for_user = settingUser.objects.first()
+        return setting_for_user
+    @sync_to_async
+    def get_show_user(setting_for_user):
+        
+        return setting_for_user.show_current
+    setting_for_user = await get_setting_user()  # Await the result
+    show_current:show = await get_show_user(setting_for_user)
+    LOGGER.info("Show current: %s", show_current)
+    if not show_current:
+        return render(
+            request,
+            settings.TEMPLATES_FOLDER + '/actions/show_add.html',
+            {
+                "form_c": ShowForm(),
+                "template_m": settings.TEMPLATES_FOLDER + '/actions/manager.html',
+            }
         )
-    else:
-        setting_for_user = settingUser.objects.first()
-    setting_for_user.show_current.selected_action = index
-    setting_for_user.show_current.save()
-    LOGGER.info("Selected action: %s", setting_for_user.show_current.selected_action)
-    return render_main(request)
+
+    show_current.selected_action = index
+    
+    @sync_to_async
+    def save_show_user(show_current):
+        show_current.save()
+
+    await save_show_user(show_current)
+
+    LOGGER.info(
+        "Selected action: %s",
+        show_current.selected_action
+    )
+
+    return HttpResponse(
+        content=json.dumps(
+            {
+                "selected_action":
+                show_current.selected_action
+            }
+        )
+    )
 
 def action_manager(request:HttpRequest):
     return render_main(request)
