@@ -65,13 +65,12 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
             }
         )
 @require_http_methods(["POST"])
-async def select_change(request: HttpRequest) -> HttpResponse:
+async def select_change(request:HttpResponse) -> HttpResponse:
     """
     Handle POST request to select a change action.
     """
 
-    index = request.POST.get('action_index')
-
+    index = json.loads(request.body).get('action_index')
     # Use sync_to_async to call the synchronous database operations
     @sync_to_async
     def get_setting_user():

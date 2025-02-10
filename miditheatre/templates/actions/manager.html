@@ -80,18 +80,17 @@
                 document.addEventListener('DOMContentLoaded', function() {
                     // Add click handler to all action items
                     document.querySelectorAll('.click-action').forEach(item => {
-                        item.addEventListener('click', function(e) {
+                        item.addEventListener('click', async function(e) {
                             console.log('Clicked action:', e.target);
                             const clickTarget = e.target;
                             const actionId = this.dataset.id;
                             const actionIndex = this.dataset.index;
                             console.log('Action index:', actionIndex);
-                            const csrftoken = getCookie('csrftoken');
+                            
                             await postData(url = 'select_change', data={
                                 action_index: actionIndex,
                                 action_id: actionId
                             });
-
                 
                 
                         });
@@ -99,6 +98,7 @@
                 });
                 async function postData(url = 'select_change', data = {}) {
                     try {
+                        const csrftoken = getCookie('csrftoken');
                         console.log("data:", data)
                         const response = await fetch("{% url 'select_change' %}", {
                             method: 'POST',
@@ -106,7 +106,7 @@
                                 'Content-Type': 'application/json',
                                 'X-CSRFToken': csrftoken
                             },
-                            body: data
+                            body: JSON.stringify(data)
                         })
                         .then(response => response.json())
                         .then(result => {
