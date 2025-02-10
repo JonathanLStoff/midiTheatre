@@ -87,57 +87,59 @@
                             const actionIndex = this.dataset.index;
                             console.log('Action index:', actionIndex);
                             const csrftoken = getCookie('csrftoken');
-                
-                            // Send POST request using fetch
-                            (async () => {
-                                try {
-                                    const response = await fetch("{% url 'select_change' %}", {
-                                        method: 'POST',
-                                        headers: {
-                                            'Content-Type': 'application/json',
-                                            'X-CSRFToken': csrftoken
-                                        },
-                                        body: {
-                                            action_index: actionIndex,
-                                            action_id: actionId
-                                        }
-                                    });
-                
-                                    if (!response.ok) {
-                                        throw new Error('Network response was not ok');
-                                    }
-                
-                                    const responseData = await response.json(); // Parse JSON response
-                                    const newSelectedAction = responseData.selected_action;
-                
-                                    // Find the currently selected action element.
-                                    const currentSelectedActionElement = document.querySelector('.list-group-item.selected-action');
-                
-                                    if (currentSelectedActionElement) {
-                                        currentSelectedActionElement.classList.remove('selected-action');
-                
-                                        const newSelectedActionElement = document.querySelector(`.list-group-item[data-action-id="${newSelectedAction}"]`);
-                
-                                        if (newSelectedActionElement) {
-                                            newSelectedActionElement.classList.add('selected-action');
-                                        } else {
-                                            console.error("New selected action element not found:", newSelectedAction);
-                                        }
-                                    } else {
-                                        console.error("Current selected action element not found.");
-                                    }
-                
-                                } catch (error) {
-                                    console.error("Error:", error);
-                                }
-                            })(); // Immediately Invoked Function Expression (IIFE)
+                            await postData(url = 'select_change', data={
+                                action_index: actionIndex,
+                                action_id: actionId
+                            });
+
                 
                 
                         });
                     });
                 });
-                
-                
+                async function postData(url = 'select_change', data = {}) {
+                    try {
+                        console.log("data:", data)
+                        const response = await fetch("{% url 'select_change' %}", {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': csrftoken
+                            },
+                            body: data
+                        })
+                        .then(response => response.json())
+                        .then(result => {
+                            console.log('Success:', result);
+                        });
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+    
+                        const responseData = await response.json(); // Parse JSON response
+                        const newSelectedAction = responseData.selected_action;
+    
+                        // Find the currently selected action element.
+                        const currentSelectedActionElement = document.querySelector('.list-group-item.selected-action');
+    
+                        if (currentSelectedActionElement) {
+                            currentSelectedActionElement.classList.remove('selected-action');
+    
+                            const newSelectedActionElement = document.querySelector(`.list-group-item[data-action-id="${newSelectedAction}"]`);
+    
+                            if (newSelectedActionElement) {
+                                newSelectedActionElement.classList.add('selected-action');
+                            } else {
+                                console.error("New selected action element not found:", newSelectedAction);
+                            }
+                        } else {
+                            console.error("Current selected action element not found.");
+                        }
+    
+                    } catch (error) {
+                        console.error("Error:", error);
+                    }
+                }
                 async function updateActionDetails(actionId) {
                     try {
                         const response = await fetch(`/action_details/${actionId}`);

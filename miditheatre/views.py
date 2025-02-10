@@ -69,7 +69,7 @@ async def select_change(request: HttpRequest) -> HttpResponse:
     """
     Handle POST request to select a change action.
     """
-    LOGGER.info("Request: %s", request.POST)
+
     index = request.POST.get('action_index')
 
     # Use sync_to_async to call the synchronous database operations
