@@ -12,7 +12,7 @@ from miditheatre.extras.keyboard_utils import keycode_to_name
 from miditheatre.extras.midi import MidiThread
 from miditheatre.extras.logger import LOGGER
 from miditheatre.forms import ActionForm, SettingsForm, PathForm, ShowForm
-from miditheatre.models import action, settingUser, show, actionPath
+from miditheatre.models import action, settingUser, show, actionPath, link_tracker
 
 MIDI = MidiThread()
 
@@ -42,9 +42,26 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
     if show_current:
         LOGGER.info("show_current.selected_action: %s", show_current.selected_action)
         LOGGER.info("show_current.actions: %s", show_current.actions)
-        for act_id, actiony in enumerate(show_current.actions):
-            actions_list[act_id] = action.objects.get(id=actiony)
+        for act_index, actiony in enumerate(show_current.actions):
+            
+            if isinstance(actiony, str):
+                actiony = {'id': actiony, 'type': 'action'}
+            if actiony.get('type') == 'link':
+                actions_list[act_index] = {'action':link_tracker.objects.get(id=actiony.get('id')), 'type': actiony.get('type')}
+                link_obj:link_tracker = link_tracker.objects.get(id=actiony.get('id'))
+                actions_list[act_index]['linked_actions']:list = []
+                for link_id in link_obj.linked_actions:
+                    actions_list[act_index]['linked_actions'].append(action.objects.get(id=link_id))
+            else:
+                actions_list[act_index] = {'action':action.objects.get(id=actiony.get('id')), 'type': actiony.get('type')}
+        
+        if len(show_current.actions) > 0:
+            if isinstance(show_current.actions[0], str):
+                show_current.actions = [{'id': show_current.actions[0], 'type': 'action'}]
+                show_current.save()
+        
         LOGGER.info("actions_list: %s", actions_list)
+        
     return render(
             request,
             settings.TEMPLATES_FOLDER + '/actions/manager.html',
@@ -64,6 +81,50 @@ def render_main(request:HttpRequest,  ac_form:ActionForm = ActionForm(), path_fo
                 'template_f': settings.TEMPLATES_FOLDER + '/actions/folder_template.html',
             }
         )
+    
+    
+@require_http_methods(["POST"])
+def link_actions(request:HttpRequest):
+    '''
+    links actions to a link object
+    
+    args:
+        request:HttpRequest - the request object with 
+            {
+                'index_id': str - the index of the action to link to
+                'action_ids': str - the ids of the actions to link seperated by commas
+                'link_id': str - the id of the link object
+                'que_name': str - the name of the link object
+            }
+    '''
+    if settingUser.objects.count() == 0:
+        setting_for_user = settingUser.objects.create(
+            theme='dark',
+            go_key=60,
+            stop_key=61
+        )
+    elif settingUser.objects.count() > 1:
+        for setting in settingUser.objects.all()[1:]:
+            setting.delete()
+    else:
+        setting_for_user = settingUser.objects.first()
+    index_id = request.POST.get('index_id')    
+    action_ids = request.POST.get('action_ids').split(',')
+    que_name = request.POST.get('que_name')
+    link_id = request.POST.get('link_id')
+    if link_id == 'None' or link_id == '' or link_id == None:
+        link_obj = link_tracker.objects.create(name=que_name, link_actions=action_ids)
+        link_obj.save()
+    else:
+        link_obj = link_tracker.objects.get(id=link_id)
+        link_obj.linked_actions.extend(action_ids)
+        link_obj.save()
+    if index_id != 'None' and index_id != '' or index_id != None:
+        setting_for_user.show_current.actions[int(index_id)]['id'] = link_obj.id
+        setting_for_user.show_current.actions[int(index_id)]['type'] = 'link'
+        setting_for_user.show_current.save()
+    return redirect('action_manager')
+
 @require_http_methods(["POST"])
 async def select_change(request:HttpResponse) -> HttpResponse:
     """
@@ -174,11 +235,22 @@ async def go_view(request:HttpRequest):
         }
         )
     
-    action_id = setting_for_user.show_current.actions[setting_for_user.show_current.selected_action]
-    action_obj:action = action.objects.get(id=action_id)
-    LOGGER.info("Action: %s", action_obj)
-    MIDI.go = True
-    await MIDI.send_midi_message(action_obj.channel, action_obj.key, action_obj.value)
+    # Check for linking
+    if setting_for_user.show_current.actions[setting_for_user.show_current.selected_action].get('type') == 'link':
+        link_id = setting_for_user.show_current.actions[setting_for_user.show_current.selected_action].get('id')
+        link_obj:link_tracker = link_tracker.objects.get(id=link_id)
+        LOGGER.info("Link: %s", link_obj)
+        for action_id in link_obj.linked_actions:
+            action_obj:action = action.objects.get(id=action_id)
+            LOGGER.info("Action: %s", action_obj)
+            await MIDI.send_midi_message(action_obj.channel, action_obj.key, action_obj.value)
+    else:
+        # if it is just an action and not a link
+        action_id = setting_for_user.show_current.actions[setting_for_user.show_current.selected_action].get('id')
+        action_obj:action = action.objects.get(id=action_id)
+        LOGGER.info("Action: %s", action_obj)
+        MIDI.go = True
+        await MIDI.send_midi_message(action_obj.channel, action_obj.key, action_obj.value)
     if setting_for_user.show_current.selected_action == len(setting_for_user.show_current.actions) - 1:
         setting_for_user.show_current.selected_action = 0
     else:
@@ -221,6 +293,15 @@ def select_action_view(request:HttpRequest):
 
 @require_http_methods(["POST"])
 def additemshow(request:HttpRequest):
+    '''
+    adds the item to the show
+    args:
+        request:HttpRequest - the request object with 
+            {
+                'id': str - the id of the action to add
+                'type': str - the type of the action to add
+            }
+    '''
     if settingUser.objects.count() == 0:
         setting_for_user = settingUser.objects.create(
             theme='dark',
@@ -240,10 +321,10 @@ def additemshow(request:HttpRequest):
         )
     else:
         current_show:show = setting_for_user.show_current 
-    if isinstance(setting_for_user.show_current.actions, list):
-        current_show.actions.append(request.POST.get('id'))
+    if isinstance(current_show.actions, list):
+        current_show.actions.append({'id': request.POST.get('id'), 'type': request.POST.get('type', 'action')})
     else:
-        current_show.actions = [request.POST.get('id')]
+        current_show.actions = [{'id': request.POST.get('id'), 'type': request.POST.get('type', 'action')}]
     current_show.save()
     return redirect('action_manager')
 

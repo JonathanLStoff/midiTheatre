@@ -37,19 +37,38 @@
                 <div id="sortable" class="list-group">
                     
                     {% for key, action_all in actions_list_dict.items %}
+                        
                         {% if key == selected_action %}
                             <script>
                                 console.log('Rendering action: {{ key }} equals {{ selected_action }}');
                             </script>
-                            <div class="selected list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}" data-selected-action="{{ selected_action }}">
+                            <div class="selected-action list-group-item action-list click-action" data-id="{{ action_all.action.id }}" data-index="{{ key }}" data-selected-action="{{ selected_action }}"  data-type="{{ action_all.type }}">
                                 <div class="row">
                                     <div class="col">
-                                        <div>{{ action_all.name }}</div>
-                                        <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
+                                        <div>{{ action_all.action.name }}</div>
+                                        {% if 'link' == action_all.type %}
+                                            {% for action_linked in action_all.linked_actions %}
+                                                <div class="details-byte linked-action">{{ action_linked.path }}/{{ action_linked.name }}</div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <div class="details-byte">{{ action_all.action.path|default_if_none:"/" }}</div>
+                                        {% endif %}
                                     </div>
                                     <div class="col-auto d-flex align-items-center">
-                                        <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
+                                        {% if 'link' == action_all.type %}
+                                            <span class="details-path me-2">Linked</span>
+                                            {% for action_linked in action_all.linked_actions %}
+                                                <span class="details-path me-2">MIDI (Channel:{{ action_linked.channel }} | Key:{{ action_linked.key }} | Value:{{ action_linked.value }})</span>
+                                            {% endfor %}
+                                        {% else %}
+                                            <span class="details-path me-2">MIDI (Channel:{{ action_all.action.channel }} | Key:{{ action_all.action.key }} | Value:{{ action_all.action.value }})</span>
+                                        {% endif %}                                        
                                         <div class="float-end">
+                                            {% if 'link' == action_all.type %}
+                                                <button type="button" id="linking-button" class="link-button-start" onclick="toggleLinking(this)" data-linkid="{{ action_all.action.id }}">🔗</button>
+                                            {% else %}
+                                                <button type="button" id="linking-button" class="link-button-start" onclick="toggleLinking(this)" data-actionid="{{ action_all.action.id }}">🔗</button>
+                                            {% endif %}
                                             <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
                                             <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
                                         </div>
@@ -57,15 +76,33 @@
                                 </div>
                             </div>
                         {% else %}
-                            <div class="list-group-item action-list click-action" data-id="{{ action_all.id }}" data-index="{{ key }}">
+                            <div class="list-group-item action-list click-action" data-id="{{ action_all.action.id }}" data-index="{{ key }}" data-type="{{ action_all.type }}">
                                 <div class="row">
                                     <div class="col">
-                                        <div>{{ action_all.name }}</div>
-                                        <div class="details-byte">{{ action_all.path|default_if_none:"/" }}</div>
+                                        <div>{{ action_all.action.name }}</div>
+                                        {% if 'link' == action_all.type %}
+                                            {% for action_linked in action_all.linked_actions %}
+                                                <div class="details-byte linked-action">{{ action_linked.path }}/{{ action_linked.name }}</div>
+                                            {% endfor %}
+                                        {% else %}
+                                            <div class="details-byte">{{ action_all.action.path|default_if_none:"/" }}</div>
+                                        {% endif %}
                                     </div>
                                     <div class="col-auto d-flex align-items-center">
-                                        <span class="details-path me-2">MIDI (Channel:{{ action_all.channel }} | Key:{{ action_all.key }} | Value:{{ action_all.value }})</span>
-                                        <div class="float-end">
+                                        {% if 'link' == action_all.type %}
+                                            <span class="details-path me-2">Linked</span>
+                                            {% for action_linked in action_all.linked_actions %}
+                                                <span class="details-path me-2">MIDI (Channel:{{ action_linked.channel }} | Key:{{ action_linked.key }} | Value:{{ action_linked.value }})</span>
+                                            {% endfor %}
+                                        {% else %}
+                                            <span class="details-path me-2">MIDI (Channel:{{ action_all.action.channel }} | Key:{{ action_all.action.key }} | Value:{{ action_all.action.value }})</span>
+                                        {% endif %}
+                                            <div class="float-end">
+                                            {% if 'link' == action_all.type %}
+                                                <button type="button" id="linking-button" class="link-button-start" onclick="toggleLinking(this)" data-linkid="{{ action_all.action.id }}">🔗</button>
+                                            {% else %}
+                                                <button type="button" id="linking-button" class="link-button-start" onclick="toggleLinking(this)" data-actionid="{{ action_all.action.id }}">🔗</button>
+                                            {% endif %}
                                             <button class="btn btn-sm btn-outline-secondary move-up">↑</button>
                                             <button class="btn btn-sm btn-outline-secondary move-down">↓</button>
                                         </div>
@@ -77,6 +114,57 @@
                 </div>
             </div>
             <script>
+                let linkingVar = false; // Initialize the global variable
+                
+                function toggleLinking(button) {
+                    const linkId = button.dataset.linkid;
+                    const actionId = button.dataset.actionid;
+                    const buttons = document.querySelectorAll("#addingItemBtn");
+                    
+
+                    if (linkId) {
+                        linkingVar = linkId;
+                    } else {
+                        linkingVar = actionId+",action";
+                    }
+                    for (let i = 0; i < buttons.length; i++) {
+                        buttons[i].classList.add("linking-btn");
+                        buttons[i].dataset.oldclick = function() { 
+                            buttons[i].onclick;
+                        }
+                        buttons[i].onclick = function() {
+                            addLinkingItem(this);
+                        };
+                    }
+                }
+                function stopLinking() {
+                    linkingVar = false;
+                    const buttons = document.querySelectorAll("#addingItemBtn");
+                    for (let i = 0; i < buttons.length; i++) {
+                        buttons[i].classList.remove("linking-btn");
+                        buttons[i].onclick = function() {
+                            buttons[i].dataset.oldclick
+                        }
+                    }
+                    console.log("Variable is now false.");
+                }
+                function addLinkingItem(button) {
+                    const action_id = button.dataset.id;
+                    if (linkingVar) {
+                        if (linkingVar.includes("action")) {
+                            console.log("Adding action item with ID:", linkingVar);
+                            const actionIds = [linkingVar.split(",")[0], action_id];
+                            const linkingId = null;
+                        } else {
+
+                            console.log("Adding item with ID:", linkingVar);
+                        }
+                        // Perform the action you want here
+                        stopLinking();
+                    } else {
+                        console.log("No item selected.");
+                    }
+                }
                 document.addEventListener('DOMContentLoaded', function() {
                     // Add click handler to all action items
                     document.querySelectorAll('.click-action').forEach(item => {
@@ -108,24 +196,23 @@
                             },
                             body: JSON.stringify(data)
                         })
-                        .then(response => response.json())
-                        .then(result => {
-                            console.log('Success:', result);
-                        });
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-    
+                        
+                        
+
                         const responseData = await response.json(); // Parse JSON response
                         const newSelectedAction = responseData.selected_action;
-    
+
+                        console.log("New selected action:", newSelectedAction);
+                        
                         // Find the currently selected action element.
                         const currentSelectedActionElement = document.querySelector('.list-group-item.selected-action');
-    
+                        console.log("Current selected action element:", currentSelectedActionElement);
+
                         if (currentSelectedActionElement) {
                             currentSelectedActionElement.classList.remove('selected-action');
-    
-                            const newSelectedActionElement = document.querySelector(`.list-group-item[data-action-id="${newSelectedAction}"]`);
+                            
+                            console.log(`.list-group-item[data-action-id="${newSelectedAction}"]`);
+                            const newSelectedActionElement = document.querySelector(`.list-group-item[data-index="${newSelectedAction}"]`);
     
                             if (newSelectedActionElement) {
                                 newSelectedActionElement.classList.add('selected-action');
@@ -169,7 +256,8 @@
                         }
                     }
                     return cookieValue;
-                }        
+                }
+
             </script>
 
         </div>

@@ -89,8 +89,18 @@ class show(Model):
     description = TextField(blank=True, null=True)
     created = DateTimeField(auto_now_add=True)
     updated = DateTimeField(auto_now=True)
-    actions = JSONField(blank=True, null=True, default=list)
+    actions = JSONField(blank=True, null=True, default=list) # List of action {id: str, type: float}
     selected_action = IntegerField(blank=True, null=True, default=0)
+    
+    def __str__(self) -> str:
+        return str(self.name)
+    
+class link_tracker(Model):
+    objects = Manager()
+    linked_actions = JSONField(blank=True, null=True, default=list)
+    name = CharField(max_length=255)
+    id = UUIDField(primary_key=True, default=uuid4, editable=False)
+    
     
     def __str__(self) -> str:
         return str(self.name)

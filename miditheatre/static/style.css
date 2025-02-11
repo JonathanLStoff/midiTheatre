@@ -114,8 +114,8 @@ h3 {
     align-items: center;
 }
 .list-group-item {
-    margin: 2%;
-    padding: 2%;
+    margin: 0%;
+    padding: 1%;
 
 }
 .click-action {
@@ -137,6 +137,10 @@ h3 {
 #sortable .list-group-item:hover {
     background-color: #717375;
 }
-.selected {
+.selected-action {
     background-color: #1467b9;
+}
+.link-button-start {
+    background-color: #15493f;
+    color: white;
 }

@@ -15,7 +15,7 @@
                         <form action="{% url 'additemshow' %}" method="post" class="mb-0">
                             {% csrf_token %}
                             <input type="hidden" name="id" value="{{ value_parts.1 }}">
-                            <button type="submit" class="add-action btn btn-primary">+</button>
+                            <button type="submit" id="addingItemBtn" data-id="{{ value_parts.1 }}" class="add-action btn btn-primary">+</button>
                         </form>
                     </div>
                 </div>
