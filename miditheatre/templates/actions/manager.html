@@ -7,9 +7,24 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#settingModal">
-        Settings
-    </button>
+    <div class="ctn-banner container">
+        <div class="top-row-ban row">
+          <div class="cell-top-set col-md-2" style="width: 15%; padding-right: 0;">  <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#settingModal">
+              Settings
+            </button>
+          </div>
+          <div class="cell-top-ban col-md-10" style="width: 85%; padding-left: 0;"> <div id="linkingModeBanner" class="container-fluid-link container-fluid" style="display: none;">
+              <div class="lnk-banner row">
+                <div class="cell-top-ban-txt col-12 bg-warning d-flex align-items-center"> <span>Linking Mode: <strong>ON</strong></span> <button id="linkingModeBanner" class="cell-top-btn btn btn-primary mb-3 align-items-center" style="display: none;">
+                    Cancel Linking
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Fixed sidebar content placement -->
     <div class="container-fluid">
         <div class="row h-100">
@@ -127,6 +142,12 @@
                     } else {
                         linkingVar = actionId+",action";
                     }
+                    if (linkingVar) {
+                        const buttonsLink = document.querySelectorAll("#linkingModeBanner")
+                        for (let i = 0; i < buttonsLink.length; i++) {
+                            buttonsLink[i].style.display = "block";
+                        }
+                    }
                     for (let i = 0; i < buttons.length; i++) {
                         buttons[i].classList.add("linking-btn");
                         buttons[i].dataset.oldclick = function() { 
@@ -147,6 +168,10 @@
                         }
                     }
                     console.log("Variable is now false.");
+                    const buttonsLink = document.querySelectorAll("#linkingModeBanner")
+                    for (let i = 0; i < buttonsLink.length; i++) {
+                        buttonsLink[i].style.display = "none";
+                    }
                 }
                 function addLinkingItem(button) {
                     const action_id = button.dataset.id;

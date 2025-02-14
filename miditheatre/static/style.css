@@ -141,6 +141,74 @@ h3 {
     background-color: #1467b9;
 }
 .link-button-start {
-    background-color: #15493f;
+    border-color: #15493f;
+    background-color: transparent;
     color: white;
+    border: 1px solid transparent;
+    border-radius: 15%;
 }
+.link-button-start:hover {
+    border-color: #15493f;
+    background-color: #b6c4d1;
+    color: white;
+    border: 1px solid transparent;
+}
+.btn-outline-secondary {
+    border-color: #4b5157;
+    color: #4b5157;
+}
+.container-fluid-link{
+    height: 0%;
+}
+
+.ctn-banner{
+    margin: 0%;
+    width: 100%;
+    padding: 0%;
+}
+.cell-top-ban{
+    width: 75%;
+    padding: 0%;
+    margin: 0%;
+    height: 10%;
+}
+.cell-top-ban-txt {
+    padding: 0%;
+    margin: 0%;
+
+}
+.cell-top-btn{
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.lnk-banner {
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* .cell-top-set{
+    width: 15%;
+    padding: 0%;
+    margin: 0%;
+}
+.cell-top-ban{
+    width: 75%;
+    padding: 0%;
+    margin: 0%;
+}
+.cell-top-btn{
+    width: 10%;
+    padding: 0%;
+    margin: 0%;
+}
+.top-row-ban{
+    padding: 0%;
+    margin: 0%;
+    display: block;
+    width: 100%;
+} */
