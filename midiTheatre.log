@@ -2392,3 +2392,7 @@
 2025-02-11 19:12:04,219 - midiTheatreLogger - INFO - actions_list: {0: {'action': <action: fader 1>, 'type': 'action'}, 1: {'action': <action: fader 1>, 'type': 'action'}, 2: {'action': <action: main fader>, 'type': 'action'}, 3: {'action': <action: main fader>, 'type': 'action'}, 4: {'action': <action: fader 1>, 'type': 'action'}}
 2025-02-11 19:12:07,803 - midiTheatreLogger - INFO - Show current: BeetleJuice
 2025-02-11 19:12:07,809 - midiTheatreLogger - INFO - Selected action: 0
+2025-03-25 21:32:12,771 - midiTheatreLogger - INFO - Root: {'mixing station': {'main fader': 'MIDI (C:1 K:2 V:34)|250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'Channel 1': {'fader 1': 'MIDI (C:5 K:6 V:5)|a0d0e5d1-701c-41d8-86f8-21544290ba9b'}}}
+2025-03-25 21:32:12,771 - midiTheatreLogger - INFO - show_current.selected_action: 0
+2025-03-25 21:32:12,771 - midiTheatreLogger - INFO - show_current.actions: [{'id': 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 'type': 'action'}, {'id': 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 'type': 'action'}, {'id': '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'type': 'action'}, {'id': '250716a1-d93e-4c01-ad85-bd1150f6ad0f', 'type': 'action'}, {'id': 'a0d0e5d1-701c-41d8-86f8-21544290ba9b', 'type': 'action'}]
+2025-03-25 21:32:12,772 - midiTheatreLogger - INFO - actions_list: {0: {'action': <action: fader 1>, 'type': 'action'}, 1: {'action': <action: fader 1>, 'type': 'action'}, 2: {'action': <action: main fader>, 'type': 'action'}, 3: {'action': <action: main fader>, 'type': 'action'}, 4: {'action': <action: fader 1>, 'type': 'action'}}
